@@ -15,12 +15,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class DefaultController extends AbstractController {
 
     /**
-     * @Route("/default");
+     * @Route("/default", name="default_index");
      * 
      * @return Response
      */
     public function index() {
-        return $this->render('default/index.html.twig',['data' => 'Home page']);
+        $data = ['data' => 'Home page'];
+        return $this->json($data);
     }
 
 }
