@@ -3,12 +3,3 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
-hooks:
-  BeforeInstall:
-    - echo: "Before Install"
-  AfterInstall:
-    - echo: "After Install"
-  ApplicationStart:
-    - echo: "Application Start"
-  ApplicationStop:
-    - echo: "Application Stop"
