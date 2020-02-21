@@ -2,4 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html
+    destination: /var/www/html/WordPress
+hooks:
+  BeforeInstall:
+    - echo: "Before Install"
+  AfterInstall:
+    - echo: "After Install"
+  ApplicationStart:
+    - echo: "Application Start"
+  ApplicationStop:
+    - echo: "Application Stop"
