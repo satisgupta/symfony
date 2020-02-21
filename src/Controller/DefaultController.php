@@ -24,7 +24,7 @@ class DefaultController extends AbstractController {
     public function index(Request $request, Product $product) {
         $request->request->get('page');
         $product->list();
-        $data = ['data' => 'Home page'];
+        $data = ['data' => 'Home page - On EC2'];
         return $this->json($data);
     }
 
